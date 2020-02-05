@@ -1,0 +1,309 @@
+html * {
+    box-sizing: border-box;
+    scroll-behavior: smooth
+}
+
+body {
+    font-family: "poppins", Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation Section */
+
+nav {
+    max-height: 50px;
+    background-color: #3a3633;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+}
+
+nav > img {
+    max-height: 50px;
+    margin-left: 20px;
+    margin-right: auto;
+}
+
+nav a {
+    font-size: 16px;
+    color: azure;
+    text-align: center;
+    text-decoration: none;
+    margin: 10px;
+}
+
+.drop {
+    font-size: 16px;
+    background-color: transparent;
+    color: azure;
+    margin: 10px;
+    border: none;
+}
+
+nav a:hover, .dropdown:hover {
+    border-bottom: solid 1px azure;
+}
+
+.dropdown-content {
+    right: 0;
+    display: none;
+    position: absolute;
+    background-color: #3a3633;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    font-size: 16px;
+    color: azure;
+    text-align: center;
+    text-decoration: none;
+
+    display: block;
+}
+
+.dropdown-content a:hover {
+    border-bottom: solid 1px azure;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Introduction Section AKA section1 */
+
+#section1 {
+    background-image: url(https://steamuserimages-a.akamaihd.net/ugc/948454029951339077/B1459543068057934430AC767BE948E474E9B573/);
+    background-position: center;
+    background-size: auto;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+}
+
+.introduction {
+    background: transparent;
+    margin: 70px;
+    border: solid 4px azure;
+    color: azure;
+
+    display: grid;
+    grid-template-areas: 'introducing dreams dreams''introducing lorem1 lorem2';
+}
+
+.introducing {
+    grid-area: introducing;
+    font-size: 50px;
+    padding: 10px;
+}
+
+.dreams {
+    grid-area: dreams;
+    font-size: 30px;
+    margin: auto 0;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    
+}
+
+.lorem1 {
+    grid-area: lorem1;
+    font-size: 16px;
+    margin: 0;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.lorem2 {
+    grid-area: lorem2;
+    font-size: 16px;
+    margin: 0;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Section 2 AKA features */
+
+#features {
+    background-color: white;
+    padding: 0 60px;
+    
+    display: grid;
+    grid-template-areas: 'feature1 feature2 feature3';
+    gap: 20px;
+}
+
+.feature1, .feature2, .feature3 {
+    margin: 50px 30px;
+    padding: 20px;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px 1px grey;
+    text-align: center;
+}
+
+.feature {
+    background-color: indigo;
+    color: cyan;
+    width: 100%;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.feature1 {
+    grid-area: feature1;
+}
+
+.feature2 {
+    grid-area: feature2;
+}
+
+.feature3 {
+    grid-area: feature3;
+}
+
+#features button:hover {
+    cursor: pointer;
+}
+
+/* Section 3 AKA cool-text */
+
+#cool-text {
+    background-color: #3a3633;
+    color: azure;
+    padding: 80px;
+}
+
+#cool-text > h2 {
+    font-size: 50px;
+}
+
+#cool-text > p {
+    font-size: 20px;
+}
+
+/* Section 4 AKA looks-cool */
+
+.looks-cool {
+    background-color: #3a3633;
+    color: azure;
+    border: solid 4px blueviolet;
+    max-width: 200px;
+    text-align: center;
+    z-index: 1;
+    transform: translate(25px, -40px)
+}
+
+.looks-cool > h4 {
+    color: crimson;
+}
+
+/* Section 5 AKA gradient */
+
+.gradient {
+    background: rgb(63,94,251);
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+    padding: 100px 50px;
+    text-align: right;
+}
+
+.gradient > h2 {
+    font-size: 100px;
+    color: azure;
+}
+
+.gradient > p {
+    font-size: 50px;
+    color: blueviolet;
+}
+
+/* Section 6 AKA pics // can't get zoom & darken to work*/
+
+#pics {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+#pics > div {
+    width: 33.33%;
+    height: calc(100vw/3);
+}
+
+#pics img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+    margin: auto;
+}
+
+#pics img:hover {
+    width: 150%;
+    height: 120%;
+    overflow: hidden;
+}
+
+/* Section 7 AKA mailing */
+
+.mailing {
+    text-align: center;
+    display: block;
+    margin: 20px;
+}
+
+.mailing label {
+    margin: 10px;
+    display: block;
+}
+
+input[name='mail'] {
+    border: solid 2px blueviolet;
+    border-radius: 4px;
+    height: 40px;
+    width: 200px;
+}
+
+input[name='send'] {
+    background-color: blueviolet;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    padding: 10px;
+    height: 40px;
+}
+
+input[name='send']:hover {
+    cursor: pointer;
+}
+
+input[name='daily']:hover {
+    cursor: pointer;
+}
+
+/* Section 8 AKA footer */
+
+footer {
+    width: 100%;
+    margin-top: 20px;
+    border-top: solid 1px grey;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+footer > div {
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+footer > div > a {
+    display: block;
+    text-decoration: none;
+    color: cadetblue;
+    padding: 10px
+}
